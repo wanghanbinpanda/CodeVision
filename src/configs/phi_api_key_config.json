@@ -1,0 +1,10 @@
+{
+    "api_key": "microsoft/Phi-3-vision-128k-instruct",
+    "base_url": "",
+    "model": "Phi-3-vision-128k-instruct",
+    "max_tokens": 1024,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "n": 1,
+    "stop": []
+}

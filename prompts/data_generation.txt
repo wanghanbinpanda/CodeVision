@@ -1,0 +1,92 @@
+You are a helpful assistant. You need to complete the following tasks:
+1.Given a problem and a code solution, use mermaid to draw a general flowchart with explicit inputs and outputs (the inputs and outputs need to be consistent with the code solution). The flowchart should depict the problem's requirements and code logic. The conditions for each path of the flowchart need to be written clearly. Note the syntax correctness of mermaid, such as the correct use of (), etc. For example, if there are special symbols in mermaid, you need to use "" to include, for example B[Input: x (integer)] is wrong, you need to use B["Input: x (integer)"]. The flowchart is enclosed with ```mermaid and ```.
+    -The logic of the flowchart needs to be exactly the same as the code
+    -If there is function nesting, display the nested functions as a subgraph
+2.Design test cases to test the code. Test cases are presented in the form of assert statements. Test cases cover basic test cases, boundary test cases, and large number test cases. You must design at least three test cases for each category. The test cases are contained with ```python and ```.
+
+<problem>
+Palindrome Number
+Given an integer x, return true if x is a palindrome, and false otherwise.
+
+
+Example 1:
+
+Input: x = 121
+Output: true
+Explanation: 121 reads as 121 from left to right and from right to left.
+Example 2:
+
+Input: x = -121
+Output: false
+Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome.
+Example 3:
+
+Input: x = 10
+Output: false
+Explanation: Reads 01 from right to left. Therefore it is not a palindrome.
+
+
+Constraints:
+
+-231 <= x <= 231 - 1
+</problem>
+
+
+<solution>
+def isPalindrome(self, x: int) -> bool:
+    if x < 0:
+        return False
+
+    reversed_num = 0
+    temp = x
+
+    while temp != 0:
+        digit = temp % 10
+        reversed_num = reversed_num * 10 + digit
+        temp //= 10
+
+    return reversed_num == x
+</solution>
+
+```mermaid
+flowchart TD
+    A[Start] --> B["Input: x (integer)"]
+    B --> C{Is x < 0?}
+    C -- Yes --> D["Output: False (negative numbers are not palindromes)"]
+    C -- No --> E[Initialize reversed_num = 0, temp = x]
+    E --> F{Is temp != 0?}
+    F -- Yes --> G[Extract last digit: digit = temp % 10]
+    G --> H[Update reversed_num: reversed_num = reversed_num * 10 + digit]
+    H --> I[Update temp: temp = temp // 10]
+    I --> F
+    F -- No --> J{Is reversed_num == x?}
+    J -- Yes --> K["Output: True (x is a palindrome)"]
+    J -- No --> L["Output: False (x is not a palindrome)"]
+```
+
+```python
+# Basic test cases
+assert isPalindrome(121) == True  # palindrome
+assert isPalindrome(-121) == False  # negative number, not a palindrome
+assert isPalindrome(10) == False  # not a palindrome
+
+# Boundary test cases
+assert isPalindrome(0) == True  # smallest non-negative integer, palindrome
+assert isPalindrome(9) == True  # single-digit number, palindrome
+assert isPalindrome(-1) == False  # smallest negative number, not a palindrome
+
+# Large number test cases
+assert isPalindrome(123454321) == True  # large palindrome
+assert isPalindrome(1000000001) == True  # large palindrome with zeros in the middle
+assert isPalindrome(123456789) == False  # large non-palindrome
+```
+
+<problem>
+%%%problem%%%
+</problem>
+
+
+<solution>
+%%%solution%%%
+</solution>
+Generate the mermaid and test cases for the second problem and solution, The logic of the flowchart needs to be exactly the same as the code. You can't ignore any details of the code in the flowchart. The logic of variable definitions, loops, decisions, etc needs to be shown in the flowchart.

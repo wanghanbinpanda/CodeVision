@@ -1,0 +1,10 @@
+{
+    "api_key": "your api key",
+    "base_url": "base_url",
+    "model": "claude-3-haiku-20240307",
+    "max_tokens": 1024,
+    "temperature": 0.2,
+    "top_p": 0.95,
+    "n": 1,
+    "stop": []
+}
