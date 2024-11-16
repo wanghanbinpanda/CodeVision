@@ -36,8 +36,8 @@ conda activate code-vision
 Check out and install requirements.
 
 ```bash
-git clone xxx.
-cd xxx
+git clone https://github.com/wanghanbinpanda/CodeVision.git
+cd CodeVision
 pip install -r requirements.txt
 ```
 
