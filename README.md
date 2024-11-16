@@ -20,11 +20,11 @@ We present **CODE-VISION**, a benchmark designed to evaluate the logical underst
 
 The evaluation instructions are available at 
 
-To submit your results to the leaderboard on Code-Vision, please send to [this email]() with your result json file and score json file, referring to the template files below:
+To submit your results to the leaderboard on Code-Vision, please send to  **wanghanbinpanda@gmail.com** with your result jsonl file and score file, referring to the template files [here](https://github.com/wanghanbinpanda/CodeVision/tree/main/output/Algorithm/gpt-4o).
 
+Leaderboard on **CODE-VISION**:
 
-
-
+![image-20241116111753927](./README.assets/image-20241116111753927.png)
 
 ### Installation
 
@@ -64,11 +64,24 @@ We will use task_id to get the image path directly from the image dir.
 
 1. Complete the model API (or model path) configuration file.
 
-   
+   Add your model config file in [src/configs](https://github.com/wanghanbinpanda/CodeVision/tree/main/src/configs). Here's an example of gpt-4o:
 
-2. Configure data path, image path and output path.
+   ```json
+   {
+       "api_key": "your api key",
+       "base_url": "base_url",
+       "model": "gpt-4o",
+       "max_tokens": 1024,
+       "temperature": 0.2,
+       "top_p": 0.95,
+       "n": 1,
+       "stop": []
+   }
+   ```
 
-   
+2. Configure model path, data path, image path and output path.
+
+   Update model configuration path [API_CONFIG](https://github.com/wanghanbinpanda/CodeVision/blob/9218864209135ab4314a09958007fe83d4fedc1e/src/scripts/evaluate_auto.sh#L12), data path [DATA_PATHS](https://github.com/wanghanbinpanda/CodeVision/blob/9218864209135ab4314a09958007fe83d4fedc1e/src/scripts/evaluate_auto.sh#L14), image path [IMAGE_DIRS](https://github.com/wanghanbinpanda/CodeVision/blob/9218864209135ab4314a09958007fe83d4fedc1e/src/scripts/evaluate_auto.sh#L20), and output path [OUTPUT_DIR](https://github.com/wanghanbinpanda/CodeVision/blob/9218864209135ab4314a09958007fe83d4fedc1e/src/scripts/evaluate_auto.sh#L26C1-L26C11) in [src/scripts/evaluate_auto.sh](https://github.com/wanghanbinpanda/CodeVision/blob/main/src/scripts/evaluate_auto.sh) file.
 
 3. Running the script.
 
