@@ -83,6 +83,7 @@ We will use task_id to get the image path directly from the image dir.
 
    Update model configuration path [API_CONFIG](https://github.com/wanghanbinpanda/CodeVision/blob/9218864209135ab4314a09958007fe83d4fedc1e/src/scripts/evaluate_auto.sh#L12), data path [DATA_PATHS](https://github.com/wanghanbinpanda/CodeVision/blob/9218864209135ab4314a09958007fe83d4fedc1e/src/scripts/evaluate_auto.sh#L14), image path [IMAGE_DIRS](https://github.com/wanghanbinpanda/CodeVision/blob/9218864209135ab4314a09958007fe83d4fedc1e/src/scripts/evaluate_auto.sh#L20), and output path [OUTPUT_DIR](https://github.com/wanghanbinpanda/CodeVision/blob/9218864209135ab4314a09958007fe83d4fedc1e/src/scripts/evaluate_auto.sh#L26C1-L26C11) in [src/scripts/evaluate_auto.sh](https://github.com/wanghanbinpanda/CodeVision/blob/main/src/scripts/evaluate_auto.sh) file.
 
+   If you are using your own model, you will need to complete a generate function in [src/evaluation/evaluate.py](https://github.com/wanghanbinpanda/CodeVision/blob/main/src/evaluation/evaluate.py), here is an [example](https://github.com/wanghanbinpanda/CodeVision/blob/6b64a0dec14ebb81801cc6ee79c36dbf65519d72/src/evaluation/evaluate.py#L60).
 3. Running the script.
 
    ```sh
