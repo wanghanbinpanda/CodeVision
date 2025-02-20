@@ -5,14 +5,14 @@ Source code for paper [Code-Vision: Evaluating Multimodal LLMs Logic Understandi
 <p align="center">
     <a href="">📜 Paper</a> •
     <a href="https://drive.google.com/file/d/1aiJB6Z1xQcBAwgcfJFTOUIpf6vVYRsq_/view?usp=sharing">💻 Data </a> •
-    <a href="https://hellokisen.github.io/codevision.io/">🏆 Leaderboard</a> 
+    <a href="https://pingshengren0901.github.io/codevision.io/">🏆 Leaderboard</a> 
 </p>
 
 ### Overview
 
 We present **CODE-VISION**, a benchmark designed to evaluate the logical understanding and reasoning capabilities of Multimodal Large Language Models (MLLMs) through code generation. **CODE-VISION** challenges MLLMs to generate a correct program that fulfills specific functionality requirements based on a given flowchart, which visually represents the desired algorithm or process. **CODE-VISION** comprises three subsets—HumanEval-V, Algorithm, and MATH—which evaluate MLLMs' reasoning abilities across basic programming, algorithmic, and mathematical problem-solving domains. Our experiments evaluate 12 MLLMs on **CODE-VISION**. Experimental results demonstrate that there is a large performance difference between proprietary and open-source models. On hard problems, GPT-4o achieves a 79.3% pass@1, while the best open-source model only achieves 15%. Further experiments reveal that **CODE-VISION** poses unique challenges compared to other multimodal reasoning benchmarks, such as MMCode and MathVista. We also investigate the reasons behind the poor performance of open-source models.
 
-### 🏆 [Leaderboard](https://hellokisen.github.io/codevision.io/) 🏆
+### 🏆 [Leaderboard](https://pingshengren0901.github.io/codevision.io/) 🏆
 
 #### Contributing the Leaderboard
 
@@ -138,7 +138,15 @@ We will use task_id to get the image path directly from the image dir.
 If you use our code or our data for your research, feel free to cite our publication:
 
 ```
-
+@misc{wang2025codevisionevaluatingmultimodalllms,
+      title={Code-Vision: Evaluating Multimodal LLMs Logic Understanding and Code Generation Capabilities}, 
+      author={Hanbin Wang and Xiaoxuan Zhou and Zhipeng Xu and Keyuan Cheng and Yuxin Zuo and Kai Tian and Jingwei Song and Junting Lu and Wenhui Hu and Xueyang Liu},
+      year={2025},
+      eprint={2502.11829},
+      archivePrefix={arXiv},
+      primaryClass={cs.CL},
+      url={https://arxiv.org/abs/2502.11829}, 
+}
 ```
 
 
